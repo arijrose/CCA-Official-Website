@@ -1,21 +1,52 @@
-# Creatives for Collective Action — four-page website
+# Creatives for Collective Action — five-page website
 
 This is a plain HTML, CSS, and JavaScript project. **Astro and Astro Nano are not required.**
 
 ## Open in Visual Studio Code
 
-1. Unzip the project, then open the `cca-site` folder in VS Code.
-2. Open `index.html` in your browser. For live reloading, use VS Code's Live Server extension.
-3. Edit the words in the four HTML files. Edit the shared design in `styles.css`.
+1. Double-click the ZIP to unzip it, then move the `cca-site` folder somewhere permanent on your computer.
+2. In VS Code, choose **File → Open Folder** and select that `cca-site` folder.
+3. Choose **Terminal → New Terminal**. The terminal should open inside the folder containing `index.html`.
+4. Run:
+
+   ```bash
+   python3 -m http.server 8000
+   ```
+
+5. Open **http://localhost:8000** in your browser. Keep the terminal running while you preview the website; press **Control + C** to stop the server.
+6. Edit the words in the five HTML files. Edit the shared design in `styles.css`, and save with **Command + S**. Refresh the browser to see your changes.
+
+No npm install or build command is needed. If Python 3 is unavailable, install VS Code's Live Server extension and use **Go Live** as an alternative.
 
 | Page | File |
 | --- | --- |
 | Home | `index.html` |
 | About | `about.html` |
 | Projects & Events | `projects-events.html` |
+| Get Involved | `get-involved.html` |
 | Contact | `contact.html` |
+| Shared appearance and spacing | `styles.css` |
+| Shared navigation and image behavior | `script.js` |
+| Photos, flyer, and logo | `images/` |
+| Charter web fonts | `fonts/` |
+| GitHub Pages custom domain | `CNAME` |
 
 All navigation links are ordinary relative links. You can open the pages directly or publish the folder on a static web host.
+
+## Publish future changes
+
+The GitHub repository is **https://github.com/arijrose/CCA-Official-Website**, and the public website is **https://creativesforcollectiveaction.com**.
+
+Local changes do not update the live website automatically. After reviewing your edits:
+
+1. Open the repository on GitHub and choose **Add file → Upload files**.
+2. Upload only the files you changed from inside `cca-site`. HTML, CSS, and JavaScript files belong at the repository's top level. For changed images, open the matching `images` folder in the repository before uploading them.
+3. Add a descriptive commit message, select **Commit directly to main**, and click **Commit changes**.
+4. Check the latest Pages deployment in **Actions**, then refresh the live website after it succeeds.
+
+Keep the `CNAME` file containing `creativesforcollectiveaction.com`; it preserves the custom domain configuration. Upload the contents of `cca-site`, rather than the enclosing folder or ZIP. You do not need to change Wix DNS settings for ordinary website edits.
+
+If you edit files directly on GitHub, download those updated files into this local folder too before making further edits, so your copies stay in sync.
 
 ## Pictures
 
@@ -45,7 +76,7 @@ The hidden `subject` field uses `{{ topic }} {{ name }}`, so a submission from A
 
 In Formspree, confirm that the form's Email action sends to the verified address **creatives.boston@gmail.com**. The recipient is controlled in Formspree, not in the website code. After uploading these files, submit one test from the Contact page and confirm receipt, subject, and reply address. A real email delivery test has not been performed from this workspace.
 
-The Contact page includes the `creatives.boston@gmail.com` email link and a link to `https://www.instagram.com/creatives.boston/`.
+The Contact page contains a welcoming introduction, the message form, and Email, Instagram, and Discord links beneath the form. The Get Involved page contains all five ways to participate, the directory form, and Email, Instagram, and Discord links. Collaboration and resource-offer links lead to the form on the Contact page.
 
 The December 5 market is presented as occurring in **2026**, based on the supplied event copy. Check the date, vendor application link, vendor count, fundraiser details, phone booth metrics, and bill status before publishing. The Projects & Events copy is still under review.
 

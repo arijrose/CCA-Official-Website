@@ -21,4 +21,3 @@ document.querySelectorAll('[data-image-slot]').forEach((slot) => {
   if (photo.complete && photo.naturalWidth > 0) slot.classList.add('has-image');
 });
 
-document.querySelector('#year').textContent = new Date().getFullYear();
