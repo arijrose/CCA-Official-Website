@@ -289,8 +289,16 @@ main>.contact-opening,main>.about-opening,main>.projects-opening,main>.get-invol
 .contact-form-section{padding-top:clamp(34px,4vw,60px);padding-bottom:clamp(55px,6vw,90px)}
 .contact-form-section .form-wrap{max-width:820px;margin:0 auto}
 .contact-form-section .contact-information--horizontal{max-width:820px;margin:28px auto 0}
-.get-involved-opening+.contact-paths-section{padding-top:clamp(34px,4vw,60px)}
-.get-involved-opening+.contact-paths-section .contact-paths{margin-top:0}
-.get-involved-opening+.contact-paths-section .contact-paths>div:nth-child(-n+2){border-top:0;padding-top:0}
+:is(.get-involved-opening,.volunteer-opportunities)+.contact-paths-section{padding-top:clamp(34px,4vw,60px)}
+:is(.get-involved-opening,.volunteer-opportunities)+.contact-paths-section .contact-paths{margin-top:0}
+:is(.get-involved-opening,.volunteer-opportunities)+.contact-paths-section .contact-paths>div:nth-child(-n+2){border-top:0;padding-top:0}
 .get-involved-links{padding-top:0;padding-bottom:clamp(55px,6vw,90px)}
 .get-involved-links .contact-information--horizontal{margin-top:0}
+
+/* Volunteer opportunities shared by Home and Get Involved. */
+.volunteer-opportunities{border-top:1px solid var(--line);padding-top:clamp(34px,4vw,60px);padding-bottom:clamp(45px,5vw,75px)}
+.get-involved-opening+.volunteer-opportunities{border-top:0}
+.volunteer-opportunities>.eyebrow{font-size:clamp(28px,3.2vw,42px);margin-bottom:24px}
+.volunteer-opportunities h3{max-width:1100px;font:normal clamp(32px,4.7vw,68px)/1.08 var(--condensed);letter-spacing:-.04em;margin:0 0 28px;text-wrap:balance}
+.volunteer-roles{max-width:1000px;font:normal clamp(20px,2vw,28px)/1.4 var(--serif);margin:0 0 24px}
+.volunteer-opportunities .text-link{max-width:100%}
