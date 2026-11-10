@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f8f6f0" />
+    <meta name="description" content="Connect and collaborate with Creatives for Collective Action in Greater Boston." />
+    <title>Contact | Creatives for Collective Action</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header" id="top">
+      <a class="wordmark" href="index.html" aria-label="Creatives for Collective Action, home">
+        <img class="brand-logo" src="images/cca-logo.png" alt="" width="2000" height="2000" />
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><span></span><span></span></button>
+      <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects-events.html">Projects &amp; Events</a>
+        <a href="get-involved.html">Get Involved</a>
+        <a href="contact.html" aria-current="page">Contact</a>
+      </nav>
+    </header>
+    <main id="main">
+      <section class="inner-hero contact-opening section-pad"><h1>Contact</h1><p class="inner-intro">We would love to hear from you. Whether it's a question, an idea, a project you’d like to share, or anything else, you can reach out to us by filling out the form below, or through our email.</p></section>
+      <section class="contact-form-section section-pad" aria-label="Send a message">
+        <div class="form-wrap">
+          <p class="eyebrow">Send a message</p>
+          <p class="form-disclosure">We’ll reply to the email address you provide.</p>
+          <form id="contact-form" action="https://formspree.io/f/mbglbqvv" method="POST">
+            <input type="hidden" name="subject" value="{{ topic }} {{ name }}" />
+            <label for="contact-name">Name <span aria-hidden="true">*</span></label>
+            <input id="contact-name" name="name" type="text" autocomplete="name" required data-fs-field aria-describedby="name-error" />
+            <span id="name-error" class="field-error" data-fs-error="name"></span>
+            <label for="contact-email">Email <span aria-hidden="true">*</span></label>
+            <input id="contact-email" name="email" type="email" autocomplete="email" required data-fs-field aria-describedby="email-error" />
+            <span id="email-error" class="field-error" data-fs-error="email"></span>
+            <label for="contact-topic">I'm reaching out about</label>
+            <select id="contact-topic" name="topic" data-fs-field>
+              <option value="Joining the Collective">Joining the Collective</option>
+              <option value="A collaboration">A collaboration</option>
+              <option value="Offering space, materials, or support">Offering space, materials, or support</option>
+              <option value="Something else">Something else</option>
+            </select>
+            <label for="contact-message">Message <span aria-hidden="true">*</span></label>
+            <textarea id="contact-message" name="message" rows="6" required data-fs-field aria-describedby="message-error"></textarea>
+            <span id="message-error" class="field-error" data-fs-error="message"></span>
+            <button class="pill-button" type="submit" data-fs-submit-btn>Send message <span aria-hidden="true"><svg class="arrow-icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" stroke-linejoin="miter" aria-hidden="true" focusable="false"><path d="M5 19 19 5 M7 5h12v12" /></svg></span></button>
+            <p id="form-status" role="status" aria-live="polite" data-fs-success>Thank you! Your message has been submitted.</p>
+            <p id="form-error" role="alert" data-fs-error></p>
+          </form>
+        </div>
+        <div class="contact-information contact-information--horizontal"><div><span>Email</span><strong><a href="mailto:creatives.boston@gmail.com">creatives.boston@gmail.com</a></strong></div><div><span>Instagram</span><strong><a href="https://www.instagram.com/creatives.boston/" target="_blank" rel="noopener noreferrer">@creatives.boston</a></strong></div><div><span>Discord</span><strong><a href="https://discord.gg/WrZ8e3az" target="_blank" rel="noopener noreferrer">Join Our Discord</a></strong></div></div>
+      </section>
+    </main>
+    <footer class="site-footer section-pad">
+      <a class="footer-wordmark" href="index.html">Creatives for<br />Collective Action<span class="footer-arrow" aria-hidden="true"><svg class="arrow-icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" stroke-linejoin="miter" aria-hidden="true" focusable="false"><path d="M5 19 19 5 M7 5h12v12" /></svg></span></a>
+      <div class="footer-bottom"><a href="mailto:creatives.boston@gmail.com">creatives.boston@gmail.com</a><a href="https://www.instagram.com/creatives.boston/" target="_blank" rel="noopener noreferrer">Instagram @creatives.boston <span aria-hidden="true"><svg class="arrow-icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" stroke-linejoin="miter" aria-hidden="true" focusable="false"><path d="M5 19 19 5 M7 5h12v12" /></svg></span></a><a href="#top">Back to top <span aria-hidden="true"><svg class="arrow-icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" stroke-linejoin="miter" aria-hidden="true" focusable="false"><path d="M12 20V4 M5 11l7-7 7 7" /></svg></span></a></div>
+    </footer>
+    <script>
+      window.formspree = window.formspree || function () {
+        (window.formspree.q = window.formspree.q || []).push(arguments);
+      };
+      window.formspree('initForm', { formElement: '#contact-form', formId: 'mbglbqvv' });
+    </script>
+    <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+  </body>
+</html>
